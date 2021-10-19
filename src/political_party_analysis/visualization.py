@@ -15,8 +15,20 @@ def scatter_plot(
     label: Optional[List[str]] = None,
 ):
     """Write a function to generate a 2D scatter plot."""
-    ##### YOUR CODE GOES HERE #####
-    pass
+    if splot is None:
+        splot = pyplot.subplot()
+    columns = transformed_data.columns
+    splot.scatter(
+        transformed_data.loc[:, columns[0]],
+        transformed_data.loc[:, columns[1]],
+        size,
+        c=color,
+        label=label,
+    )
+    splot.set_aspect("equal", "box")
+    splot.set_xlabel("1st Component")
+    splot.set_ylabel("2nd Component")
+    splot.legend()
 
 
 def plot_density_estimation_results(
