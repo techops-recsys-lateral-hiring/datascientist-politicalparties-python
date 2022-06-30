@@ -39,6 +39,12 @@ class DataLoader:
         """Write a function to handle NaN values in a dataframe"""
         ##### YOUR CODE GOES HERE #####
         pass
+    
+    def scale_features(self, df: pd.DataFrame) -> pd.DataFrame:
+        """Write a function to normalise values in a dataframe. Use StandardScaler."""
+        ##### YOUR CODE GOES HERE #####
+        pass
+
 
     def preprocess_data(self):
         """Write a function to combine all pre-processing steps for the dataset"""
