@@ -1,4 +1,5 @@
 import pandas as pd
+from sklearn.decomposition import PCA
 
 
 class DimensionalityReducer:
@@ -11,4 +12,11 @@ class DimensionalityReducer:
         self.data = data
         self.feature_columns = data.columns
 
-    ##### YOUR CODE GOES HERE #####
+    def pca(self) -> pd.DataFrame:
+        """Convert high-dimensional data to 2-dimensional using PCA."""
+
+        pca = PCA(n_components=self.n_components)
+        reduced_data = pca.fit_transform(self.data[self.feature_columns])
+        reduced_df = pd.DataFrame(reduced_data, columns=["pc1", "pc2"])
+        reduced_df.index = self.data.index
+        return reduced_df
