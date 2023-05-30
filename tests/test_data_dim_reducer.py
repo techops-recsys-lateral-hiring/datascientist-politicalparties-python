@@ -1,5 +1,6 @@
 import pandas as pd
 import pytest
+import pdb
 from political_party_analysis.dim_reducer import DimensionalityReducer
 
 @pytest.fixture
@@ -18,5 +19,5 @@ def mock_df() -> pd.DataFrame:
 def test_dim_reducer(mocker, mock_df: pd.DataFrame):
     dim_reducer = DimensionalityReducer(data=mock_df)
     mocker.patch.object(dim_reducer, "data", mock_df)
-    dim_reducer.pca()
-    assert dim_reducer.data.shape == (3, 3)
+    reduced_data = dim_reducer.transform_data()
+    assert reduced_data.shape == (3, 2)
