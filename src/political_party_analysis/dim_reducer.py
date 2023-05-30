@@ -24,10 +24,4 @@ class DimensionalityReducer:
         
         reduced_data = self.model().fit_transform(self.data[self.feature_columns]) 
         return reduced_data
-    
-    def map_to_original(self, reduced_data: np.array) -> np.array:
-        """Convert reduced data back to its initial dimensions"""
-        
-        high_dimension_data = self.model().inverse_transform(reduced_data)
-        return high_dimension_data
 

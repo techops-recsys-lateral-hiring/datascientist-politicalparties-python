@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 
 class DensityEstimator:
@@ -11,7 +12,26 @@ class DensityEstimator:
 
     def __init__(self, data: pd.DataFrame, dim_reducer, high_dim_feature_names):
         self.data = data
-        self.dim_reducer_model = dim_reducer.model
+        self.dim_reducer_model = dim_reducer.model()
         self.feature_names = high_dim_feature_names
 
-    ##### YOUR CODE GOES HERE #####
+    def multivariate_normal_mle_estimator(self):
+        """Calculate the MLE estimates of mean and covariance matrix from a sample.
+        """
+        self.mean = self.data.mean()
+        self.cov = np.cov(self.data)
+
+    def multivariate_normal_variable_generator(self, size:int) -> np.array:
+        """ Generate random variables from a multivariate normal distribution.
+        """
+        
+        return np.random.multivariate_normal(mean=self.mean, cov=self.cov, size=size)
+    
+    def map_to_original(self, reduced_data: np.array) -> np.array:
+        """Convert reduced data back to its initial dimensions.
+        """
+        
+        high_dimension_data = self.dim_reducer_model.inverse_transform(reduced_data)
+        return high_dimension_data
+
+
