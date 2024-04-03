@@ -5,7 +5,7 @@ description = ""
 authors = ["Iswariya Manivannan <iswariya.m17@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.8,<=3.12"
+python = ">=3.9,<3.13"
 requests = "*"
 numpy = "*"
 pandas = "*"
@@ -29,9 +29,9 @@ ignore_missing_imports = true
 
 [tool.black]
 line-length = 100
-target-version = ["py38", "py39", "py38", "py310", "py311", "py312"]
-include = "\.pyi?$"
-exclude = """
+target-version = ["py39", "py38", "py310", "py311", "py312"]
+include = '\.pyi?$'
+exclude = '''
 /(
     \.eggs
   | \.git
@@ -44,4 +44,4 @@ exclude = """
   | build
   | dist
 )/
-"""
+'''
