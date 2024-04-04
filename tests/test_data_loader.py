@@ -39,4 +39,4 @@ def test_preprocess_data(mocker, mock_df: pd.DataFrame):
         index=[0, 1, 2],
     )
     expected_df.index.name = "id"
-    assert_frame_equal(data_loader.party_data, expected_df, check_less_precise=3)
+    assert_frame_equal(data_loader.party_data, expected_df, rtol=3)

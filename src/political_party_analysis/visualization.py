@@ -51,7 +51,7 @@ def plot_density_estimation_results(
         scatter_plot(X.loc[Y_ == i], color=color, splot=splot)
         angle = np.arctan(u[1] / u[0])
         angle = 180.0 * angle / np.pi
-        ell = mpl.patches.Ellipse(mean, v[0], v[1], 180.0 + angle, color=color)
+        ell = mpl.patches.Ellipse(mean, v[0], v[1], angle=180.0 + angle, color=color)
         ell.set_clip_box(splot.bbox)
         ell.set_alpha(0.5)
         splot.add_artist(ell)
