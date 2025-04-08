@@ -12,3 +12,5 @@ class DimensionalityReducer:
         self.feature_columns = data.columns
 
     ##### YOUR CODE GOES HERE #####
+    def transform(self):
+        pass
