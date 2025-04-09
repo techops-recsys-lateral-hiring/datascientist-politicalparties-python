@@ -1,6 +1,6 @@
 import pandas as pd
 import pytest
-
+from political_party_analysis.dim_reducer import DimensionalityReducer
 
 @pytest.fixture
 def mock_df() -> pd.DataFrame:
