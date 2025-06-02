@@ -5,14 +5,14 @@ description = ""
 authors = ["Iswariya Manivannan <iswariya.m17@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.13"
+python = ">=3.9,<3.14"
 requests = "*"
 numpy = "*"
 pandas = "*"
 matplotlib = "*"
 scikit-learn = "*"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 pytest = "*"
 black = "*"
 flake8 = "*"
@@ -29,7 +29,7 @@ ignore_missing_imports = true
 
 [tool.black]
 line-length = 100
-target-version = ["py39", "py38", "py310", "py311", "py312"]
+target-version = ["py39", "py38", "py310", "py311", "py312", "py313"]
 include = '\.pyi?$'
 exclude = '''
 /(
