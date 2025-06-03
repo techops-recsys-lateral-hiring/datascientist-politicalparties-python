@@ -43,11 +43,10 @@ use:
 poetry add <python-package-name>
 ```
 
-### Run tests & checks
+### Run tests
 
-The unit tests, linting checks, and type checks can be run either by using the `make`
-commands (given in the Makefile) or by using the corresponding commands for the
-respective packages. For example, unit tests can be executed using:
+The unit tests can be run either by using the `make` command (given in the Makefile) or
+by running `pytest` directly:
 
 ```bash
 make test
