@@ -10,11 +10,13 @@ class DataLoader:
     data_url: str = "https://www.chesdata.eu/s/CHES2019V3.dta"
 
     def __init__(self) -> None:
+        """Initialize the data loader."""
         self.party_data = self._download_data()
         self.non_features = []
         self.index = ["party_id", "party", "country"]
 
     def _download_data(self) -> pd.DataFrame:
+        """Download the dataset."""
         data_path, _ = urlretrieve(
             self.data_url,
             Path(__file__).parents[2].joinpath(*["data", "CHES2019V3.dta"]),
@@ -22,29 +24,23 @@ class DataLoader:
         return pd.read_stata(data_path)
 
     def remove_duplicates(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Write a function to remove duplicates in a dataframe"""
+        """Remove duplicates in DataFrame."""
         ##### YOUR CODE GOES HERE #####
-        pass
 
     def remove_nonfeature_cols(
         self, df: pd.DataFrame, non_features: list[str], index: list[str]
     ) -> pd.DataFrame:
-        """Write a function to remove certain features cols and set certain cols as indices
-        in a dataframe"""
+        """Remove non-feature cols and set certain cols as indices in the DataFrame."""
         ##### YOUR CODE GOES HERE #####
-        pass
 
     def handle_NaN_values(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Write a function to handle NaN values in a dataframe"""
+        """Handle NaN values in the DataFrame."""
         ##### YOUR CODE GOES HERE #####
-        pass
 
     def scale_features(self, df: pd.DataFrame) -> pd.DataFrame:
-        """Write a function to normalise values in a dataframe. Use StandardScaler."""
+        """Normalise values in the DataFrame using StandardScaler."""
         ##### YOUR CODE GOES HERE #####
-        pass
 
     def preprocess_data(self) -> None:
-        """Write a function to combine all pre-processing steps for the dataset"""
+        """Combine all pre-processing steps for the dataset."""
         ##### YOUR CODE GOES HERE #####
-        pass
