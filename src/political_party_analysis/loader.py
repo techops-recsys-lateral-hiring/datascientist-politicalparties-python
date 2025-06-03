@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import List
 from urllib.request import urlretrieve
 
 import pandas as pd
@@ -10,7 +9,7 @@ class DataLoader:
 
     data_url: str = "https://www.chesdata.eu/s/CHES2019V3.dta"
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.party_data = self._download_data()
         self.non_features = []
         self.index = ["party_id", "party", "country"]
@@ -28,7 +27,7 @@ class DataLoader:
         pass
 
     def remove_nonfeature_cols(
-        self, df: pd.DataFrame, non_features: List[str], index: List[str]
+        self, df: pd.DataFrame, non_features: list[str], index: list[str]
     ) -> pd.DataFrame:
         """Write a function to remove certain features cols and set certain cols as indices
         in a dataframe"""
@@ -45,7 +44,7 @@ class DataLoader:
         ##### YOUR CODE GOES HERE #####
         pass
 
-    def preprocess_data(self):
+    def preprocess_data(self) -> None:
         """Write a function to combine all pre-processing steps for the dataset"""
         ##### YOUR CODE GOES HERE #####
         pass
