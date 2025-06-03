@@ -9,7 +9,6 @@ matplotlib = "^3.0.0"
 numpy = "^2.0.0"
 pandas = "^2.0.0"
 python = ">=3.9,<3.14"
-requests = "*"
 scikit-learn = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]
