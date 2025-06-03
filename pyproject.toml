@@ -1,8 +1,7 @@
-[tool.poetry]
+[project]
 name = "political_party_analysis"
 version = "0.2.0"
 description = "A package for analysing results of the Chapel Hill Expert Survey dataset"
-authors = ["Iswariya Manivannan <iswariya.m17@gmail.com>"]
 
 [tool.poetry.dependencies]
 matplotlib = "^3.0.0"
