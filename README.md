@@ -11,9 +11,7 @@ provides further information on the survey attributes.
 This repository contains the necessary setup and codebase to help guide you in
 performing an analysis using different statistical methods.
 
-## Project Setup
-
-### Pre-requisites
+## Pre-requisites
 
 Please make sure you have the following software installed:
 
@@ -21,7 +19,7 @@ Please make sure you have the following software installed:
 - [Poetry](https://python-poetry.org/docs/)
 
 
-### Install all Python dependencies
+## Install project and dependencies
 
 Poetry is used for Python dependency management. To install the necessary Python
 dependencies run the following command:
@@ -36,14 +34,11 @@ Alternatively, the `make` command defined in the Makefile can also be used:
 make install
 ```
 
-Similarly to add and install new Python packages to your Poetry virtual environment,
-use:
+## Development
 
-```bash
-poetry add <python-package-name>
-```
+Installing this project with Poetry will install the development dependencies by default.
 
-### Run tests
+### Running the tests
 
 The unit tests can be run either by using the `make` command (given in the Makefile) or
 by running `pytest` directly:
@@ -57,6 +52,20 @@ or
 ```bash
 poetry run pytest tests
 ```
+
+### Installing pre-commit hooks
+
+This project uses [pre-commit](https://pre-commit.com) to manage a collection of
+pre-commit hooks that help maintain source code quality. If you are going to make
+contributions to this codebase, please ensure you have install the pre-commit hooks
+before committing any code, by running the following:
+
+```bash
+poetry run pre-commit install
+```
+
+To modify or update hooks, see the file `.pre-commit-config.yaml`.
+
 
 ## Gearing Up for the Pairing Session
 
