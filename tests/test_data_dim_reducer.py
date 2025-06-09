@@ -18,6 +18,7 @@ def mock_df() -> pd.DataFrame:
     return df
 
 
+@pytest.mark.skip(reason="Enable this when working on exercise two.")
 def test_dimensionality_reducer(mock_df: pd.DataFrame):
     dim_reducer = DimensionalityReducer(mock_df)
     transformed_data = dim_reducer.transform()
