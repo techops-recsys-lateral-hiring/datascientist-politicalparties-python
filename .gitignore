@@ -137,3 +137,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Data and plots for this project
+data/*
+plots/*
