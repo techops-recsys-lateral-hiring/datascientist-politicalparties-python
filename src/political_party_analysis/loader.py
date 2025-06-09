@@ -17,9 +17,9 @@ class DataLoader:
 
     def _download_data(self) -> pd.DataFrame:
         """Download the dataset."""
-        data_path, _ = urlretrieve(
+        data_path, _headers = urlretrieve(
             self.data_url,
-            Path(__file__).parents[2].joinpath(*["data", "CHES2019V3.dta"]),
+            filename=Path(__file__).parents[2] / "data" / "CHES2019V3.dta",
         )
         return pd.read_stata(data_path)
 
