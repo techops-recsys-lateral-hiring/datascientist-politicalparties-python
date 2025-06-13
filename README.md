@@ -15,8 +15,8 @@ performing an analysis using different statistical methods.
 
 Please make sure you have the following software installed:
 
-- Python (3.9 - 3.13)
-- [Poetry](https://python-poetry.org/docs/)
+- Python (3.11-3.13)
+- [Poetry](https://python-poetry.org/docs/) (>= version 2.0)
 
 
 ## Install project and dependencies
