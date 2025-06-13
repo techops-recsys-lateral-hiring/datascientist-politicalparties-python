@@ -6,10 +6,10 @@ class DimensionalityReducer:
     1. Write a function to convert the high dimensional data to 2 dimensional.
     """
 
-    def __init__(self, data: pd.DataFrame, n_components: int = 2):
+    def __init__(self, data: pd.DataFrame, n_components: int = 2) -> None:
         self.n_components = n_components
         self.data = data
 
-    ##### YOUR CODE GOES HERE #####
-    def transform(self):
-        pass
+    def transform(self) -> pd.DataFrame:
+        """Transform this instance's data to lower number of dimensions."""
+        ##### YOUR CODE GOES HERE #####

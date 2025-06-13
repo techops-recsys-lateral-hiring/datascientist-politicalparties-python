@@ -1,47 +1,20 @@
-[tool.poetry]
+[project]
 name = "political_party_analysis"
 version = "0.2.0"
-description = ""
-authors = ["Iswariya Manivannan <iswariya.m17@gmail.com>"]
+description = "A package for analysing results of the Chapel Hill Expert Survey dataset"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+    "matplotlib >= 3.0, < 4.0",
+    "numpy >= 2.0, < 3.0",
+    "pandas >= 2.0, < 3.0",
+    "scikit-learn >= 1.0, < 2.0"
+]
 
-[tool.poetry.dependencies]
-python = ">=3.9,<3.13"
-requests = "*"
-numpy = "*"
-pandas = "*"
-matplotlib = "*"
-scikit-learn = "*"
-
-[tool.poetry.dev-dependencies]
-pytest = "*"
-black = "*"
-flake8 = "*"
-mypy = "*"
-pytest-mock = "*"
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^4.2.0"
+pytest = "^8.4.0"
+pytest-mock = "^3.14.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.mypy]
-python_version = "3.8"
-ignore_missing_imports = true
-
-[tool.black]
-line-length = 100
-target-version = ["py39", "py38", "py310", "py311", "py312"]
-include = '\.pyi?$'
-exclude = '''
-/(
-    \.eggs
-  | \.git
-  | \.hg
-  | \.mypy_cache
-  | \.tox
-  | \.venv
-  | _build
-  | buck-out
-  | build
-  | dist
-)/
-'''

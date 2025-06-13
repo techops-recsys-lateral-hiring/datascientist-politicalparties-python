@@ -1,21 +1,28 @@
 # Survey Analysis
 
-As a data scientist you are required to analyse the political landscape of Europe using the **Chapel Hill Expert Survery** dataset. The dataset provides insights into the positioning of **277 political parties** in Europe based on **55 different attributes**. The dataset can be downloaded [here](https://www.chesdata.eu/2019-chapel-hill-expert-survey) and the [codebook](https://static1.squarespace.com/static/5975c9bfdb29d6a05c65209b/t/5fa04ec05d3c8218b7c91450/1604341440585/2019_CHES_codebook.pdf) provides further information on the survey attributes.
+As a data scientist you are required to analyse the political landscape of Europe using
+the **Chapel Hill Expert Survery** dataset. The dataset provides insights into the
+positioning of **277 political parties** in Europe based on **55 different
+attributes**. The dataset can be downloaded
+[here](https://www.chesdata.eu/2019-chapel-hill-expert-survey) and the
+[codebook](https://static1.squarespace.com/static/5975c9bfdb29d6a05c65209b/t/5fa04ec05d3c8218b7c91450/1604341440585/2019_CHES_codebook.pdf)
+provides further information on the survey attributes.
 
-This repository contains the necessary setup and codebase to help guide you in performing an analysis using different statistical methods.
+This repository contains the necessary setup and codebase to help guide you in
+performing an analysis using different statistical methods.
 
-## Project Setup
-
-### Pre-requisites
+## Pre-requisites
 
 Please make sure you have the following software installed:
 
-- Python (3.9 - 3.12)
-- [Poetry](https://python-poetry.org/docs/)
+- Python (3.11-3.13)
+- [Poetry](https://python-poetry.org/docs/) (>= version 2.0)
 
-### Install all Python dependencies
 
-Poetry is used for Python dependency management. To install the necessary Python dependencies run the following command:
+## Install project and dependencies
+
+Poetry is used for Python dependency management. To install the necessary Python
+dependencies run the following command:
 
 ```bash
 poetry install
@@ -27,15 +34,14 @@ Alternatively, the `make` command defined in the Makefile can also be used:
 make install
 ```
 
-Similarly to add and install new Python packages to your Poetry virtual environment, use:
+## Development
 
-```bash
-poetry add <python-package-name>
-```
+Installing this project with Poetry will install the development dependencies by default.
 
-### Run tests & checks
+### Running the tests
 
-The unit tests, linting checks, and type checks can be run either by using the `make` commands (given in the Makefile) or by using the corresponding commands for the respective packages. For example, unit tests can be executed using:
+The unit tests can be run either by using the `make` command (given in the Makefile) or
+by running `pytest` directly:
 
 ```bash
 make test
@@ -47,17 +53,19 @@ or
 poetry run pytest tests
 ```
 
-For running linting checks using flake8, use:
+### Installing pre-commit hooks
+
+This project uses [pre-commit](https://pre-commit.com) to manage a collection of
+pre-commit hooks that help maintain source code quality. If you are going to make
+contributions to this codebase, please ensure you have install the pre-commit hooks
+before committing any code, by running the following:
 
 ```bash
-poetry run flake8 src tests
+poetry run pre-commit install
 ```
 
-or
+To modify or update hooks, see the file `.pre-commit-config.yaml`.
 
-```bash
-make lint-check
-```
 
 ## Gearing Up for the Pairing Session
 
@@ -68,4 +76,6 @@ Please be sure to complete the below tasks before the pairing session:
 3. Have your coding environment ready by installing Python and Poetry.
 4. Ensure that you are able to run all commands mentioned in this README (note that a failing test from pytest is expected).
 
-**Please note that you DO NOT have to complete the code/tasks inside the `src/` folder. These are intended to be completed collaboratively during the pairing session.**
+
+**Please note that you DO NOT have to complete the code/tasks inside the `src/`
+folder. These are intended to be completed collaboratively during the pairing session.**
