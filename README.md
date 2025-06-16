@@ -4,6 +4,9 @@ As a data scientist you are required to analyse the political landscape of Europ
 
 This repository contains the necessary setup and codebase to help guide you in performing an analysis using different statistical methods.
 
+**Please note that you DO NOT have to complete the code/tasks inside the `src/` folder. These are intended to be completed collaboratively during the pairing session.**
+
+
 ## Project Setup
 
 ### Pre-requisites
